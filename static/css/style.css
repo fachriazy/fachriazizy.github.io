@@ -607,6 +607,29 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .tl-bullets li strong { color: var(--c-text); }
 
+.tl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+.tl-tags span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8vh 1.2vw;
+  background: rgba(var(--rgb-surface), 0.45);
+  border: 1px solid rgba(var(--rgb-accent), 0.25);
+  border-radius: 50px;
+  font-size: clamp(11px, 0.9vw, 14px);
+  color: var(--c-muted);
+  transition: var(--ease);
+}
+.tl-tags span:hover {
+  background: rgba(var(--rgb-accent), 0.28);
+  border-color: var(--c-accent);
+  color: var(--c-accent-l);
+}
+
 /* ══════════════════════════════════
    SKILLS — Tabbed Card System
 ══════════════════════════════════ */
@@ -725,9 +748,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .sk-level--advanced  { background: rgba(var(--rgb-accent-l),0.1); color: var(--c-accent-l); border: 1px solid rgba(var(--rgb-accent-l),0.22); }
 .sk-level--proficient { background: rgba(var(--rgb-accent),0.18); color: var(--c-accent-l); border: 1px solid rgba(var(--rgb-accent),0.28); }
 
-/* ══════════════════════════════════
-   PORTFOLIO CARDS
-══════════════════════════════════ */
+
 .portfolio-card {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -788,9 +809,13 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
   background: rgba(var(--rgb-surface),0.5);
   border: 1px solid rgba(var(--rgb-accent),0.28);
   border-radius: var(--r);
-  padding: 14px 10px;
+  padding: 1.5vh 1vw;
   text-align: center;
   transition: var(--ease);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .pf-metric-card:hover { border-color: var(--c-accent); }
 .pf-num {
@@ -942,7 +967,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.88vw;
+  font-size: 18px;
   color: var(--c-accent-l);
 }
 .ci-label {
@@ -1116,7 +1141,7 @@ textarea.form-input-custom { resize: vertical; min-height: 14vh; }
   
 
   /* Contact */
-  .contact-form { padding: 20px 16px; }
+  .contact-form { padding: 3vh 4vw; }
 
   /* Portfolio metric row */
   .pf-metrics-row .col-4 { width: 50%; }
@@ -1161,6 +1186,12 @@ textarea.form-input-custom { resize: vertical; min-height: 14vh; }
   
   .footer-logo { font-size: 6vw; }
   .footer-copy, .footer-link { font-size: 3.5vw; }
+
+  /* Card paddings for mobile */
+  .glass-card, .service-card, .portfolio-card { padding: 4vh 6vw; }
+  .sk-card { padding: 2.5vh 5vw; }
+  .cert-card, .contact-info-card { padding: 3vh 5vw; }
+  .pf-metric-card { padding: 2vh 3vw; }
 }
 
 
