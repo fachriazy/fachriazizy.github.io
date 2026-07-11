@@ -157,7 +157,100 @@
 
 
 /* ══════════════════════════════
-   5. HERO PARTICLE CANVAS
+   4.5. TYPEWRITER EFFECT
+══════════════════════════════ */
+(function initTypewriter() {
+  const typeElement = document.getElementById('typewriter');
+  if (!typeElement) return;
+
+  const words = JSON.parse(typeElement.getAttribute('data-words'));
+  let wordIndex = 0;
+  let isDeleting = false;
+  let text = '';
+  let typingDelay = 100;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+      text = currentWord.substring(0, text.length - 1);
+      typingDelay = 50; // delete faster
+    } else {
+      text = currentWord.substring(0, text.length + 1);
+      typingDelay = 100;
+    }
+
+    typeElement.innerHTML = text;
+
+    if (!isDeleting && text === currentWord) {
+      typingDelay = 2000; // pause at the end of word
+      isDeleting = true;
+    } else if (isDeleting && text === '') {
+      isDeleting = false;
+      wordIndex++;
+      if (wordIndex >= words.length) {
+        wordIndex = 0;
+      }
+      typingDelay = 500; // pause before typing next word
+    }
+
+    setTimeout(type, typingDelay);
+  }
+
+  // start
+  setTimeout(type, 1000);
+})();
+
+
+/* ══════════════════════════════
+   5. TIMELINE SCROLL ANIMATION
+══════════════════════════════ */
+(function initTimelineScroll() {
+  const timeline = document.getElementById('experienceTimeline');
+  if (!timeline) return;
+
+  // Create progress line
+  const progressLine = document.createElement('div');
+  progressLine.classList.add('timeline-progress');
+  timeline.appendChild(progressLine);
+
+  const dots = timeline.querySelectorAll('.tl-dot');
+
+  function updateTimeline() {
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // We want the line to draw down to slightly below the middle of the screen.
+    const startOffset = windowHeight * 0.6; 
+    
+    // progress in px
+    let progress = startOffset - rect.top;
+    if (progress < 0) progress = 0;
+    if (progress > rect.height) progress = rect.height;
+    
+    progressLine.style.height = progress + 'px';
+
+    // Light up dots
+    dots.forEach(dot => {
+      const dotRect = dot.getBoundingClientRect();
+      // if dot is above the trigger point
+      if (dotRect.top < startOffset) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateTimeline, { passive: true });
+  window.addEventListener('resize', updateTimeline, { passive: true });
+  // Slight delay to ensure layout is done
+  setTimeout(updateTimeline, 100); 
+})();
+
+
+/* ══════════════════════════════
+   6. HERO PARTICLE CANVAS
 ══════════════════════════════ */
 (function initParticles() {
   const hero = document.getElementById('hero');
