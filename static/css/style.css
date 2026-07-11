@@ -264,6 +264,12 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.hero-subtitle {
+  font-family: var(--f-mono);
+  font-size: clamp(14px, 1.2vw, 20px);
+  color: var(--c-accent-l);
+  font-weight: 500;
+}
 .hero-role {
   font-family: var(--f-display);
   font-size: 1.2vw;
