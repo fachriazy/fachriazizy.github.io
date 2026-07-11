@@ -222,24 +222,27 @@
 function handleFormSubmit(event) {
   event.preventDefault();
 
-  const btn      = document.getElementById('submitBtn');
-  const feedback = document.getElementById('formFeedback');
   const name     = document.getElementById('formName').value.trim();
+  const email    = document.getElementById('formEmail').value.trim();
+  const msg      = document.getElementById('formMessage').value.trim();
 
-  // Simulate sending
-  btn.disabled     = true;
-  btn.innerHTML    = '<i class="bi bi-hourglass-split me-2"></i>Sending…';
-  feedback.textContent = '';
+  // Generate mailto link
+  const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${msg}`);
+  
+  // Redirect to open the user's mail app
+  window.location.href = `mailto:fachriazy@gmail.com?subject=${subject}&body=${body}`;
 
+  // Visual feedback and reset
+  const btn      = document.getElementById('submitBtn');
+  const originalHtml = btn.innerHTML;
+  
+  btn.innerHTML = '<i class="bi bi-check2-circle me-2"></i>Opening Mail App...';
+  
   setTimeout(() => {
-    btn.disabled  = false;
-    btn.innerHTML = '<i class="bi bi-send-fill me-2"></i>Send Message';
-    feedback.textContent = `Thank you, ${name || 'there'}! I'll get back to you soon.`;
+    btn.innerHTML = originalHtml;
     event.target.reset();
-
-    // Clear feedback after 5 s
-    setTimeout(() => { feedback.textContent = ''; }, 5000);
-  }, 1400);
+  }, 3000);
 }
 
 
