@@ -1,0 +1,101 @@
+/* ═══════════════════════════════════════════════════════════
+   color.css — Fachri Azizy Portfolio
+   Single source of truth for every color, gradient, shadow,
+   radius, font, and transition used across the site.
+
+   Palette (dark navy-slate):
+     #06141B  ·  #11212D  ·  #253745
+     #4A5C6A  ·  #9BA8AB  ·  #CCD0CF
+════════════════════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Backgrounds ─────────────────────────────────────── */
+  --c-bg:        #06141B;   /* page base – darkest navy       */
+  --c-bg2:       #11212D;   /* alternate section background   */
+
+  /* ── Surfaces (cards, panels, overlays) ──────────────── */
+  --c-surface:   rgba(37, 55, 69, 0.35);   /* #253745 @ 35% */
+  --c-surface2:  rgba(74, 92, 106, 0.18);  /* #4A5C6A @ 18% */
+
+  /* ── Borders ─────────────────────────────────────────── */
+  --c-border:    rgba(74, 92, 106, 0.35);
+
+  /* ── Accent scale ────────────────────────────────────── */
+  --c-accent:    #4A5C6A;   /* primary interactive accent     */
+  --c-accent-l:  #9BA8AB;   /* lighter tone – labels, icons   */
+  --c-accent-d:  #253745;   /* darker tone – deep fills       */
+
+  /* ── Text ────────────────────────────────────────────── */
+  --c-text:      #CCD0CF;   /* primary body text              */
+  --c-muted:     #9BA8AB;   /* secondary / placeholder text   */
+  --c-white:     #ffffff;
+
+  /* ── Gradients ───────────────────────────────────────── */
+  --g-primary:   linear-gradient(135deg, #4A5C6A 0%, #253745 55%, #11212D 100%);
+  --g-accent:    linear-gradient(135deg, #9BA8AB 0%, #4A5C6A 100%);
+  --g-text:      linear-gradient(135deg, #CCD0CF 0%, #9BA8AB 100%);
+
+  /* ── Skill card proficiency border colours ───────────── */
+  --c-skill-expert:    #CCD0CF;
+  --c-skill-advanced:  #9BA8AB;
+  --c-skill-proficient:#4A5C6A;
+
+  /* ── Typography ──────────────────────────────────────── */
+  --f-display:   'Poppins', sans-serif;
+  --f-body:      'Poppins', sans-serif;
+  --f-accent:    'Poppins', sans-serif;
+
+  /* ── Shape ───────────────────────────────────────────── */
+  --r:           14px;   /* default border-radius  */
+  --r-lg:        20px;   /* large card radius      */
+
+  /* ── Shadow / Glow ───────────────────────────────────── */
+  --glow:        0 0 32px rgba(74, 92, 106, 0.30);  /* = rgba(var(--rgb-accent), 0.30) */
+  --glow-lg:     0 0 60px rgba(74, 92, 106, 0.22);  /* = rgba(var(--rgb-accent), 0.22) */
+
+  /* ── Motion ──────────────────────────────────────── */
+  --ease:        0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ────────────────────────────────────────────────────
+     RGB CHANNELS — for rgba() composition in style.css
+     Usage: rgba(var(--rgb-accent), 0.18)
+     Never use raw numbers in style.css.
+  ──────────────────────────────────────────────────── */
+  --rgb-bg:        0, 0, 0;        /* Pure black as requested     */
+  --rgb-bg2:       17, 33, 45;     /* #11212D — alt bg / stat card */
+  --rgb-surface:   37, 55, 69;     /* #253745 — card / panel fills */
+  --rgb-accent:    74, 92, 106;    /* #4A5C6A — primary accent     */
+  --rgb-accent-l:  155, 168, 171;  /* #9BA8AB — light silver-blue  */
+  --rgb-text:      204, 208, 207;  /* #CCD0CF — primary text       */
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT MODE
+════════════════════════════════════════════════════════════ */
+[data-theme="light"] {
+  --c-bg:        #ffffff;
+  --c-bg2:       #f5f7f8;
+  --c-surface:   rgba(235, 240, 244, 0.6);
+  --c-surface2:  rgba(235, 240, 244, 0.9);
+  --c-border:    rgba(74, 92, 106, 0.15);
+  
+  --c-accent:    #4A5C6A;
+  --c-accent-l:  #253745;
+  --c-accent-d:  #11212D;
+  
+  --c-text:      #11212D;
+  --c-muted:     #4A5C6A;
+  --c-white:     #11212D;
+  
+  --g-primary:   linear-gradient(135deg, #4A5C6A 0%, #9BA8AB 100%);
+  --g-accent:    linear-gradient(135deg, #253745 0%, #4A5C6A 100%);
+  --g-text:      linear-gradient(135deg, #11212D 0%, #4A5C6A 100%);
+
+  --rgb-bg:        255, 255, 255;
+  --rgb-bg2:       245, 247, 248;
+  --rgb-surface:   235, 240, 244;
+  --rgb-accent:    74, 92, 106;
+  --rgb-accent-l:  37, 55, 69;
+  --rgb-text:      17, 33, 45;
+}
