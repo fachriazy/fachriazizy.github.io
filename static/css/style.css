@@ -721,7 +721,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--r-lg);
-  padding: 3vh 2.5vw;
+  padding: 2vh 2vw;
   transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
   position: relative;
   overflow: hidden;
@@ -760,7 +760,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .pf-title {
   font-family: var(--f-display);
-  font-size: clamp(18px, 1.4vw, 26px);
+  font-size: clamp(16px, 1.2vw, 22px);
   font-weight: 700;
   color: var(--c-white);
   margin-bottom: 8px;
@@ -768,7 +768,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .pf-text {
   color: var(--c-muted);
-  font-size: clamp(14px, 1.1vw, 18px);
+  font-size: clamp(13px, 1vw, 15px);
   line-height: 1.78;
   margin-bottom: 18px;
   position: relative;
@@ -777,7 +777,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
   background: rgba(var(--rgb-surface),0.5);
   border: 1px solid rgba(var(--rgb-accent),0.28);
   border-radius: var(--r);
-  padding: 1.5vh 1vw;
+  padding: 1vh 1vw;
   text-align: center;
   transition: var(--ease);
   height: 100%;
@@ -789,7 +789,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .pf-num {
   display: inline-block;
   font-family: var(--f-display);
-  font-size: 2vw;
+  font-size: 1.6vw;
   font-weight: 900;
   background: var(--g-accent);
   -webkit-background-clip: text;
@@ -799,7 +799,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .pf-unit {
   font-family: var(--f-display);
-  font-size: 1.3vw;
+  font-size: 1vw;
   font-weight: 700;
   background: var(--g-accent);
   -webkit-background-clip: text;
@@ -809,7 +809,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .pf-num-text {
   display: block;
   font-family: var(--f-display);
-  font-size: 1.6vw;
+  font-size: 1.4vw;
   font-weight: 900;
   background: var(--g-accent);
   -webkit-background-clip: text;
