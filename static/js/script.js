@@ -127,34 +127,6 @@
 })();
 
 
-/* ══════════════════════════════
-   4. SKILLS TAB SWITCHER
-══════════════════════════════ */
-(function initSkillTabs() {
-  const tabs   = document.querySelectorAll('.sk-tab');
-  const panels = document.querySelectorAll('.sk-panel');
-  if (!tabs.length) return;
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
-
-      // Update tab states
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      // Update panel states
-      panels.forEach(p => p.classList.remove('active'));
-      const panel = document.getElementById('panel-' + target);
-      if (panel) panel.classList.add('active');
-    });
-  });
-})();
-
 
 /* ══════════════════════════════
    4.5. TYPEWRITER EFFECT
@@ -402,5 +374,23 @@ function handleFormSubmit(event) {
         });
       }
     });
+  });
+})();
+
+
+/* ══════════════════════════════
+   8. ACTIVE NAV LINK HIGHLIGHT
+══════════════════════════════ */
+(function initActiveNav() {
+  const currentPath = window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
   });
 })();

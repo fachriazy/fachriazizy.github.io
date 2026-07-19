@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fachri Azizy Izzaturrahim – Business Analyst & Business Architect specialising in process improvement, data analytics, and strategic architecture." />
+  <meta name="keywords" content="Business Analyst, Business Architect, Data Analytics, Process Improvement, Fachri Azizy" />
+  <meta name="author" content="Fachri Azizy Izzaturrahim" />
+  <meta property="og:title" content="Fachri Azizy – Business Analyst & Architect" />
+  <meta property="og:description" content="Portfolio of Fachri Azizy – turning strategy into clear documentation, architecture, and measurable results." />
+  <meta property="og:type" content="website" />
+  <title>Fachri Azizy – Business Analyst & Architect</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/color.css?v=2" />
+  <link rel="stylesheet" href="static/css/style.css?v=2" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" >
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-black" href="index.html">FA<span class="text-purple">.</span></a>
+      <div class="d-flex d-lg-none align-items-center gap-2">
+        <button class="btn btn-purple-outline theme-toggle-btn d-flex align-items-center justify-content-center" style="width: 42px; height: 42px; padding: 0; border-radius: 50%;" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill fs-5" style="color: var(--c-accent-l);"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-white"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 d-none d-lg-flex align-items-center">
+            <button class="btn btn-purple-outline theme-toggle-btn d-flex align-items-center justify-content-center" style="width: 42px; height: 42px; padding: 0; border-radius: 50%;" aria-label="Toggle theme">
+              <i class="bi bi-moon-stars-fill fs-5" style="color: var(--c-accent-l);"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header d-flex align-items-center">
+        <div class="container text-start position-relative z-index-1">
+      <h1 class="display-5 fw-black text-white mb-3" data-aos="fade-up">Get in Touch</h1>
+      <p class="fs-6 text-muted me-auto" style="max-width: 600px;" data-aos="fade-up" data-aos-delay="100">Have a project in mind? Let's discuss how I can help drive your business goals forward.</p>
+    </div>
+  </header>
+  <section id="contact" class="section-pad">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+
+        <div class="col-lg-5" data-aos="fade-up">
+          <div class="d-flex flex-column gap-3 mb-4">
+            <a href="mailto:fachriazy@gmail.com" class="contact-info-card" id="cEmail">
+              <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
+              <div>
+                <p class="ci-label">Email</p>
+                <p class="ci-value">fachriazy@gmail.com</p>
+              </div>
+            </a>
+            <a href="https://wa.me/6281514889527" target="_blank" class="contact-info-card" id="cPhone">
+              <div class="ci-icon"><i class="bi bi-whatsapp"></i></div>
+              <div>
+                <p class="ci-label">Phone / WhatsApp</p>
+                <p class="ci-value">+62 815-1488-9527</p>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/fachriazy" target="_blank" rel="noopener" class="contact-info-card" id="cLinkedin">
+              <div class="ci-icon"><i class="bi bi-linkedin"></i></div>
+              <div>
+                <p class="ci-label">LinkedIn</p>
+                <p class="ci-value">linkedin.com/in/fachriazy</p>
+              </div>
+            </a>
+            <div class="contact-info-card" id="cLocation">
+              <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <p class="ci-label">Location</p>
+                <p class="ci-value">Java, Indonesia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-left">
+          <form class="contact-form glass-card" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="formName" class="form-label-custom">Full Name</label>
+                <input type="text" id="formName" class="form-input-custom" placeholder="Your Name" required />
+              </div>
+              <div class="col-sm-6">
+                <label for="formEmail" class="form-label-custom">Email Address</label>
+                <input type="email" id="formEmail" class="form-input-custom" placeholder="your@email.com" required />
+              </div>
+              <div class="col-12">
+                <label for="formSubject" class="form-label-custom">Subject</label>
+                <input type="text" id="formSubject" class="form-input-custom" placeholder="Project Inquiry" />
+              </div>
+              <div class="col-12">
+                <label for="formMessage" class="form-label-custom">Message</label>
+                <textarea id="formMessage" class="form-input-custom" rows="5"
+                          placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-purple w-100" id="submitBtn">
+                  Send Message
+                </button>
+                <p class="form-feedback text-center mt-2" id="formFeedback"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-3">
+          <span class="footer-logo">FA<span class="text-purple">.</span></span>
+        </div>
+        <div class="col-md-6 text-center">
+          <p class="footer-copy mb-0">
+            &copy; 2026 Fachri Azizy Izzaturrahim. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-3 d-flex justify-content-md-end gap-3">
+          <a href="mailto:fachriazy@gmail.com" class="footer-link"><i class="bi bi-envelope"></i></a>
+          <a href="https://linkedin.com/in/fachriazy" target="_blank" rel="noopener" class="footer-link"><i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/6281514889527" target="_blank" class="footer-link"><i class="bi bi-whatsapp"></i></a>
+          <a href="#hero" class="footer-link"><i class="bi bi-arrow-up-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="static/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
