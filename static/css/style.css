@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .btn-purple-outline {
   background: transparent;
   color: var(--c-accent-l);
-  border: 1.5px solid var(--c-accent);
+  border: none;
   border-radius: 50px;
   font-family: var(--f-display);
   font-weight: 600;
@@ -721,7 +721,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--r-lg);
-  padding: 2vh 2vw;
+  padding: 1.5vh 1.5vw;
   transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
   position: relative;
   overflow: hidden;
@@ -748,11 +748,11 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .pf-badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 12px;
+  padding: 0.5vh 0.8vw;
   background: rgba(var(--rgb-accent),0.18);
   border: 1px solid rgba(var(--rgb-accent),0.35);
   border-radius: 4px;
-  font-size: clamp(12px, 0.9vw, 14px);
+  font-size: 0.75vw;
   color: var(--c-accent-l);
   font-weight: 600;
   margin-bottom: 12px;
@@ -760,17 +760,17 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .pf-title {
   font-family: var(--f-display);
-  font-size: clamp(16px, 1.2vw, 22px);
+  font-size: 1.1vw;
   font-weight: 700;
   color: var(--c-white);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   position: relative;
 }
 .pf-text {
   color: var(--c-muted);
-  font-size: clamp(13px, 1vw, 15px);
-  line-height: 1.78;
-  margin-bottom: 18px;
+  font-size: 0.9vw;
+  line-height: 1.6;
+  margin-bottom: 14px;
   position: relative;
 }
 .pf-metric-card {
@@ -789,7 +789,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .pf-num {
   display: inline-block;
   font-family: var(--f-display);
-  font-size: 1.6vw;
+  font-size: 1.3vw;
   font-weight: 900;
   background: var(--g-accent);
   -webkit-background-clip: text;
@@ -799,7 +799,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .pf-unit {
   font-family: var(--f-display);
-  font-size: 1vw;
+  font-size: 0.8vw;
   font-weight: 700;
   background: var(--g-accent);
   -webkit-background-clip: text;
@@ -809,7 +809,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 .pf-num-text {
   display: block;
   font-family: var(--f-display);
-  font-size: 1.4vw;
+  font-size: 1.1vw;
   font-weight: 900;
   background: var(--g-accent);
   -webkit-background-clip: text;
@@ -819,7 +819,7 @@ h1, h2, h3, h4, h5, .navbar-brand { font-family: var(--f-display); }
 }
 .pf-label {
   display: block;
-  font-size: 0.8vw;
+  font-size: 0.6vw;
   color: var(--c-muted);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -992,6 +992,32 @@ textarea.form-input-custom { resize: vertical; min-height: 14vh; }
   line-height: 1.8;
 }
 
+/* ── LIQUID GLASS EFFECT FOR ALL CARDS ── */
+.glass-card, .service-card, .portfolio-card, .sk-card, .cert-card, .contact-info-card {
+  background: var(--g-glass) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border: none !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-theme="light"] .glass-card, [data-theme="light"] .service-card, [data-theme="light"] .portfolio-card, [data-theme="light"] .sk-card, [data-theme="light"] .cert-card, [data-theme="light"] .contact-info-card {
+  background: var(--g-glass) !important;
+  border: none !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.glass-card:hover, .service-card:hover, .portfolio-card:hover, .sk-card:hover, .cert-card:hover, .contact-info-card:hover {
+  border: none !important;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4) !important;
+  transform: translateY(-4px) !important;
+}
+
+[data-theme="light"] .glass-card:hover, [data-theme="light"] .service-card:hover, [data-theme="light"] .portfolio-card:hover, [data-theme="light"] .sk-card:hover, [data-theme="light"] .cert-card:hover, [data-theme="light"] .contact-info-card:hover {
+  border: none !important;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
 .site-footer {
   background: var(--c-bg);
   border-top: 1px solid var(--c-border);
@@ -1138,10 +1164,11 @@ textarea.form-input-custom { resize: vertical; min-height: 14vh; }
   .footer-copy, .footer-link { font-size: 3.5vw; }
 
   /* Card paddings for mobile */
-  .glass-card, .service-card, .portfolio-card { padding: 4vh 6vw; }
+  .glass-card, .service-card { padding: 4vh 6vw; }
+  .portfolio-card { padding: 3vh 4vw; }
   .sk-card { padding: 2.5vh 5vw; }
   .cert-card, .contact-info-card { padding: 3vh 5vw; }
-  .pf-metric-card { padding: 2vh 3vw; }
+  .pf-metric-card { padding: 1.5vh 2vw; }
 }
 
 

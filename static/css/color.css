@@ -35,6 +35,7 @@
   --g-primary:   linear-gradient(135deg, #4A5C6A 0%, #253745 55%, #11212D 100%);
   --g-accent:    linear-gradient(135deg, #9BA8AB 0%, #4A5C6A 100%);
   --g-text:      linear-gradient(135deg, #CCD0CF 0%, #9BA8AB 100%);
+  --g-glass:     linear-gradient(135deg, rgba(74, 92, 106, 0.8) 0%, rgba(17, 33, 45, 0.9) 100%);
 
   /* ── Skill card proficiency border colours ───────────── */
   --c-skill-expert:    #CCD0CF;
@@ -91,6 +92,7 @@
   --g-primary:   linear-gradient(135deg, #4A5C6A 0%, #9BA8AB 100%);
   --g-accent:    linear-gradient(135deg, #253745 0%, #4A5C6A 100%);
   --g-text:      linear-gradient(135deg, #11212D 0%, #4A5C6A 100%);
+  --g-glass:     linear-gradient(135deg, rgba(235, 240, 244, 0.9) 0%, rgba(155, 168, 171, 0.7) 100%);
 
   --rgb-bg:        255, 255, 255;
   --rgb-bg2:       245, 247, 248;
